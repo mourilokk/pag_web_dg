@@ -1,0 +1,173 @@
+        /* Paleta de Cores */
+                :root {
+            --ciano-oceanico: #20ADC0;
+            --eclipse-abissal: #328995;
+            --azul-nebuloso: #35646A;
+            --grafite-oceanico: #2B3D40;
+            --carvao-boreal: #2B3233;
+            --luz-eterea: #FFFFFF;
+        }
+
+        /* Estilos Gerais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--luz-eterea);
+            color: var(--carvao-boreal);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background: var(--luz-eterea);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header img {
+            width: 60px;
+            height: auto;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: var(--eclipse-abissal);
+            margin: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, var(--ciano-oceanico), var(--eclipse-abissal));
+            color: var(--luz-eterea);
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        .btn-destaque {
+            background: var(--luz-eterea);
+            color: var(--ciano-oceanico);
+            font-weight: bold;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-destaque:hover {
+            background: #f0f0f0;
+        }
+
+        /* Seção de Aprovações */
+        .aprovacoes {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .aprovacoes img {
+            max-width: 100%;
+            border-radius: 30px;
+        }
+
+        /* Botão flutuante */
+        #btnAbrirForm {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--ciano-oceanico);
+            color: var(--luz-eterea);
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #btnAbrirForm:hover {
+            background-color: var(--eclipse-abissal);
+        }
+
+        /* Modal Formulário */
+        .modal-bg {
+            display: flex; /* Modal agora abre automaticamente */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--luz-eterea);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .modal-header {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--carvao-boreal);
+            margin-bottom: 10px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: var(--carvao-boreal);
+        }
+
+        .btn-submit {
+            background: var(--ciano-oceanico);
+            color: var(--luz-eterea);
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: var(--eclipse-abissal);
+        }
+
+        /* Rodapé */
+        .footer {
+        background: var(--carvao-boreal);
+        color: var(--luz-eterea);
+        text-align: center;
+        padding: 1px;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+        width: 100%;
+}
