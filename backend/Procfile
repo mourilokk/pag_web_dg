@@ -1,0 +1,1 @@
+web: gunicorn pag_prof_dg.wsgi --log-file -
