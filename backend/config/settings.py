@@ -25,7 +25,7 @@ GOOGLE_SHEETS_CREDENTIALS = json.loads(base64.b64decode(GOOGLE_SHEETS_CREDENTIAL
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "pagwebdg-production.up.railway.app/",
+    "https://pagwebdg-production.up.railway.app/",
     "https://www.professordouglasmartins.com.br",
     "127.0.0.1",
     "localhost",
