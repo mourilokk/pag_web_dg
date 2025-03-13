@@ -27,6 +27,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "pagwebdg-production.up.railway.app/",
     "https://www.professordouglasmartins.com.br",
+    "127.0.0.1",
+    "localhost",
 ]
 
 
