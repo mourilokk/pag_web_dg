@@ -55,7 +55,7 @@ def deletar_usuario(request, id):
     
     return JsonResponse({"status": "error", "message": "Método Inválido."}, status=405)
 
-creds = Credentials.from_service_account_file(credentials_path, scopes=SCOPES)
+creds = Credentials.from_service_account_info(credentials_path, scopes=SCOPES)
 client = gspread.authorize(creds)
 
 def exportar_dados_sheets(request):

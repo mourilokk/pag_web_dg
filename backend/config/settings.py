@@ -13,7 +13,7 @@ pymysql.install_as_MySQLdb()
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-g%^rz9flc_nh4(d&*z4d#x#^4l!4s=q+3y1qoq+0ja)sn9j6=z'
 
-GOOGLE_SHEETS_CREDENTIALS = config("GOOGLE_SHEETS_CREDENTIALS")
+GOOGLE_SHEETS_CREDENTIALS = os.getenv("GOOGLE_SHEETS_CREDENTIALS")
 
 
 if not os.path.exists(GOOGLE_SHEETS_CREDENTIALS):
