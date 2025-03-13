@@ -25,8 +25,8 @@ GOOGLE_SHEETS_CREDENTIALS = json.loads(base64.b64decode(GOOGLE_SHEETS_CREDENTIAL
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "https://pagwebdg-production.up.railway.app/",
-    "https://www.professordouglasmartins.com.br",
+    "pagwebdg-production.up.railway.app",
+    "www.professordouglasmartins.com.br",
     "127.0.0.1",
     "localhost",
 ]
@@ -147,7 +147,7 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://pagwebdg-production.up.railway.app/",
+    "https://pagwebdg-production.up.railway.app",
     "https://www.professordouglasmartins.com.br",
 ]
 
