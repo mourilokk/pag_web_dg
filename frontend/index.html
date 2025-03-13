@@ -13,42 +13,83 @@
 <body>
 
     <!-- Cabeçalho -->
-    <div class="header">
-        <img src="/frontend/images/logo_semfundo.png" alt="Logo">
-        <h1>Professor Douglas Martins</h1>
-    </div>
+<!-- 🔹 Cabeçalho com Logo, Navegação e Nome -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="images/logo_semfundo.png" alt="Logo do Professor" class="logo">
+            </div>
+            <ul class="nav-center">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#valores">Valores</a></li>
+                <li><a href="#aprovacoes">Aprovações</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+            </ul>
+            <div class="nav-right">
+                <span>Professor Douglas Martins</span>
+            </div>
+        </nav>
+    </header>
+
+
+    <section id ="introducao" class="lamina">
+        <img src="images/introducao.png" alt="Introdução">
+    </section>
+
+    <section id="servicos" class="lamina">
+        <img src="images/servicos.png" alt="Serviços">
+    </section>
+
+    <section id="valores" class="lamina">
+        <img src="images/valores.png" alt="Valores">
+    </section>
+
+    <section id="aprovacoes" class="lamina">
+        <img src="images/aprovacoes.png" alt="Aprovações">
+    </section>
+
+    <section class="titulo-secao">
+        <h2>Depoimentos</h2>
+    </section>
+
+    <section id="depoimentos" class="lamina depoimentos">
+        <div class="depoimento">
+            <img src="images/[POST] DEPOIMENTO DOUGLAS F.png" alt="Depoimento Douglas">
+        </div>
+
+        <div class="depoimento">
+            <img src="images/[POST] DEPOIMENTO THIAGO MARQUES.png">
+        </div>
+    </section>
 
     <!-- Seção Hero -->
-    <div class="hero">
-        <h2>Transforme suas redações com um especialista!</h2>
-        <p>Recursos administrativos para concursos públicos.</p>
-        <button class="btn-destaque" id="btnHero">Quero meu cupom</button>
-    </div>
-
-    <!-- Seção de Aprovações -->
-    <div class="aprovacoes">
-        <h2>Aprovações do Professor</h2>
-        <img src="/frontend/images/aprovacoes.png" alt="Aprovações">
-    </div>
-
-    <!-- Botão para abrir o formulário -->
-    <button id="btnAbrirForm">Garanta seu cupom!</button>
-
-    <!-- Modal do Formulário -->
-    <div class="modal-bg" id="modalForm">
-        <div class="modal-content">
-            <button class="close-btn" id="btnFechar">&times;</button>
-            <div class="modal-header">Cadastre-se para receber seu cupom!</div>
-            <form id="formCadastro">
-                <div class="mb-3"><input type="text" class="form-control" id="nome" placeholder="Nome" required></div>
-                <div class="mb-3"><input type="email" class="form-control" id="email" placeholder="E-mail" required></div>
-                <div class="mb-3"><input type="text" class="form-control" id="estado" placeholder="Estado" required></div>
-                <div class="mb-3"><input type="text" class="form-control" id="formacao" placeholder="Formação" required></div>
-                <div class="mb-3"><input type="text" class="form-control" id="whatsapp" placeholder="Número WhatsApp" required></div>
-                <button type="submit" class="btn-submit">Cadastrar</button>
-            </form>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Transforme suas redações com um especialista!</h2>
+            <p>Recursos administrativos para concursos públicos.</p>
+            <button class="btn-hero" id="btnHero">Quero meu cupom</button>
         </div>
-    </div>
+    </section>
+
+        <!-- Botão para abrir o formulário -->
+        <button id="btnAbrirForm">Garanta seu cupom!</button>
+
+        <!-- Modal do Formulário -->
+        <div class="modal-bg" id="modalForm">
+            <div class="modal-content">
+                <button class="close-btn" id="btnFechar">&times;</button>
+                <div class="modal-header">Cadastre-se para receber seu cupom!</div>
+                <form id="formCadastro">
+                    <div class="mb-3"><input type="text" class="form-control" id="nome" placeholder="Nome" required></div>
+                    <div class="mb-3"><input type="email" class="form-control" id="email" placeholder="E-mail" required></div>
+                    <div class="mb-3"><input type="text" class="form-control" id="estado" placeholder="Estado" required></div>
+                    <div class="mb-3"><input type="text" class="form-control" id="formacao" placeholder="Formação" required></div>
+                    <div class="mb-3"><input type="text" class="form-control" id="whatsapp" placeholder="Número WhatsApp" required></div>
+                    <button type="submit" class="btn-submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- Rodapé -->
     <div class="footer">
