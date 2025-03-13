@@ -24,7 +24,10 @@ GOOGLE_SHEETS_CREDENTIALS = json.loads(base64.b64decode(GOOGLE_SHEETS_CREDENTIAL
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "https://pagwebdg-production.up.railway.app/",
+    "https://www.professordouglasmartins.com.br",
+]
 
 
 # Application definition
@@ -141,15 +144,17 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://pagwebdg-production.up.railway.app/",
     "https://www.professordouglasmartins.com.br",
 ]
 
 X_FRAME_OPTIONS = 'DENY'
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
