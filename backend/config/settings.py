@@ -2,6 +2,8 @@ from pathlib import Path
 import os
 from decouple import config
 import pymysql
+import json
+import base64
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,11 +15,15 @@ pymysql.install_as_MySQLdb()
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-g%^rz9flc_nh4(d&*z4d#x#^4l!4s=q+3y1qoq+0ja)sn9j6=z'
 
-GOOGLE_SHEETS_CREDENTIALS = os.getenv("GOOGLE_SHEETS_CREDENTIALS")
+
+GOOGLE_SHEETS_CREDENTIALS_BASE64 = os.getenv("GOOGLE_SHEETS_CREDENTIALS_BASE64")
 
 
-if not os.path.exists(GOOGLE_SHEETS_CREDENTIALS):
-    raise ValueError(f"Arquivo de credenciais não encontrado no caminho: {GOOGLE_SHEETS_CREDENTIALS}")
+
+if not os.path.exists(GOOGLE_SHEETS_CREDENTIALS_BASE64):
+    raise ValueError(f"Arquivo de credenciais não encontrado no caminho: {GOOGLE_SHEETS_CREDENTIALS_BASE64}")
+
+GOOGLE_SHEETS_CREDENTIALS = json.loads(base64.b64decode(GOOGLE_SHEETS_CREDENTIALS_BASE64).decode("utf-8"))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
