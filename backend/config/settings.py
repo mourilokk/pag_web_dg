@@ -21,13 +21,7 @@ if not os.path.exists(GOOGLE_SHEETS_CREDENTIALS):
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "127.0.0.1:8000",
-    "professordouglasmartins.com.br",
-    "www.professordouglasmartins.com.br"
-]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
