@@ -8,11 +8,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from decouple import config
 import os
-
-credentials_path = config("GOOGLE_SHEETS_CREDENTIALS")
-
-if not os.path.exists(credentials_path):
-    raise ValueError("Arquivo não encontrado")
+from config.settings import GOOGLE_SHEETS_CREDENTIALS
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
 
@@ -55,7 +51,7 @@ def deletar_usuario(request, id):
     
     return JsonResponse({"status": "error", "message": "Método Inválido."}, status=405)
 
-creds = Credentials.from_service_account_info(credentials_path, scopes=SCOPES)
+creds = Credentials.from_service_account_info(GOOGLE_SHEETS_CREDENTIALS, scopes=SCOPES)
 client = gspread.authorize(creds)
 
 def exportar_dados_sheets(request):

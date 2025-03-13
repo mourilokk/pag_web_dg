@@ -16,9 +16,7 @@ pymysql.install_as_MySQLdb()
 SECRET_KEY = config("SECRET_KEY_DJANGO")
 
 
-GOOGLE_SHEETS_CREDENTIALS_BASE64 = os.getenv("GOOGLE_SHEETS_CREDENTIALS_BASE64")
-
-
+GOOGLE_SHEETS_CREDENTIALS_BASE64 = config("GOOGLE_SHEETS_CREDENTIALS_BASE64", default=None)
 
 if not (GOOGLE_SHEETS_CREDENTIALS_BASE64):
     raise ValueError(f"Arquivo de credenciais não encontrado no caminho: {GOOGLE_SHEETS_CREDENTIALS_BASE64}")
