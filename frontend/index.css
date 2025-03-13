@@ -165,9 +165,26 @@
         background: var(--carvao-boreal);
         color: var(--luz-eterea);
         text-align: center;
-        padding: 1px;
+        padding: 15px 10x;
         font-size: 14px;
         font-weight: 500;
-        position: relative;
         width: 100%;
+        line-height: 1.6;
+        position: relative;
+        bottom: 0;
 }
+
+        .footer a {
+            color: var(--ciano-oceanico);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            color: var(--eclipse-abissal);
+            text-decoration: underline;
+        }
+
+        .footer p {
+            margin: 1px 0;
+        }
