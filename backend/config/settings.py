@@ -13,14 +13,14 @@ pymysql.install_as_MySQLdb()
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-g%^rz9flc_nh4(d&*z4d#x#^4l!4s=q+3y1qoq+0ja)sn9j6=z'
+SECRET_KEY = config("SECRET_KEY_DJANGO")
 
 
 GOOGLE_SHEETS_CREDENTIALS_BASE64 = os.getenv("GOOGLE_SHEETS_CREDENTIALS_BASE64")
 
 
 
-if not os.path.exists(GOOGLE_SHEETS_CREDENTIALS_BASE64):
+if not (GOOGLE_SHEETS_CREDENTIALS_BASE64):
     raise ValueError(f"Arquivo de credenciais não encontrado no caminho: {GOOGLE_SHEETS_CREDENTIALS_BASE64}")
 
 GOOGLE_SHEETS_CREDENTIALS = json.loads(base64.b64decode(GOOGLE_SHEETS_CREDENTIALS_BASE64).decode("utf-8"))
