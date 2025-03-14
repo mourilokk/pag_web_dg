@@ -43,7 +43,7 @@ function getCookie(name){
     return cookieValue;
 }
 
-const API_URL = "https://api.professordouglasmartins.com.br/api/";
+const API_URL = "pagwebdg-production.up.railway.app/api/";
 
 document.addEventListener("DOMContentLoaded", function(){
     const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
