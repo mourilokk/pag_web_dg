@@ -8,6 +8,23 @@ btnFechar.addEventListener("click", () => { modalForm.style.display = "none"; })
 btnAbrirForm.addEventListener("click", () => { modalForm.style.display = "flex"; });
 btnHero.addEventListener("click", () => { modalForm.style.display = "flex"; });
 
+function getCookie(name){
+    let cookieValue = null;
+    if(document.cookie && document.cookie !== ''){
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++){
+            const cookie = cookies[i].trim();
+            if(cookie.startsWith(name + '=')){
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+const API_URL = "https://pagwebdg-production.up.railway.app/api/";
+
 document.getElementById("formCadastro").addEventListener("submit", async function (event) {
     event.preventDefault();
 
@@ -22,23 +39,25 @@ document.getElementById("formCadastro").addEventListener("submit", async functio
     };
 
     try{
-        let response = await fetch("http://127.0.0.1:8000/api/cadastrar/", {
+        let response = await fetch(`${API_URL}cadastrar/`, {
             method: "POST",
             headers:{
                 'Content-Type': "application/json",
                 "X-CSRFToken": csrftoken
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(formData),
+            mode: "cors"
         });
 
         let result = await response.json();
 
-        if(result.status === "success"){
+        if(response.ok && result.status === "success"){
             alert("Cadastro realizado com sucesso!");
 
-            await fetch("http://127.0.0.1:8000/api/exportar", {
-                method: "GET"
-            })
+            await fetch(`${API_URL}exportar/`, {
+                method: "GET",
+                mode: "cors"
+            });
 
             document.getElementById("formCadastro").reset();
 
@@ -47,6 +66,7 @@ document.getElementById("formCadastro").addEventListener("submit", async functio
             alert("Erro ao cadastrar: " + result.message);
         }
     } catch (error){
+        console.error("Erro ao conectar ao servidor:", error);
         alert("Erro ao conectar ao servidor.");
     }
 });
