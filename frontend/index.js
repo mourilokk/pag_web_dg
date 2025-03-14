@@ -8,6 +8,26 @@ btnFechar.addEventListener("click", () => { modalForm.style.display = "none"; })
 btnAbrirForm.addEventListener("click", () => { modalForm.style.display = "flex"; });
 btnHero.addEventListener("click", () => { modalForm.style.display = "flex"; });
 
+const whatsappInput = document.getElementById('whatsapp');
+
+whatsappInput.addEventListener('input', function(e){
+    let numero = e.target.value;
+
+    numero = numero.replace(/\D/g, '');
+
+    if(numero.length > 11){
+        numero = numero.slice(0, 11);
+    }
+
+    if(numero.length <= 10){
+        numero = numero.replace(/^(\d{2})(\d{4})(\d{4})$/, '($1) $2-$3');
+    } else {
+        numero = numero.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+    }
+
+    e.target.value = numero;
+})
+
 function getCookie(name){
     let cookieValue = null;
     if(document.cookie && document.cookie !== ''){
