@@ -23,7 +23,7 @@ function getCookie(name){
     return cookieValue;
 }
 
-const API_URL = "https://pagwebdg-production.up.railway.app/api/";
+const API_URL = "https://api.professordouglasmartins.com.br/api/";
 
 document.addEventListener("DOMContentLoaded", function(){
     const navLinks = document.querySelectorAll(".navbar-nav .nav-link");

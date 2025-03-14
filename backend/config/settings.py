@@ -27,6 +27,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "pagwebdg-production.up.railway.app",
     "www.professordouglasmartins.com.br",
+    "api.professordouglasmartins.com.br",
     "127.0.0.1",
     "localhost",
 ]
@@ -142,6 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "https://www.professordouglasmartins.com.br",
     "https://professordouglasmartins.com.br",
+    "https://api.professordouglasmartins.com.br",
 ]
 
 
@@ -150,6 +152,7 @@ CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
     "https://pagwebdg-production.up.railway.app",
     "https://www.professordouglasmartins.com.br",
+    "https://api.professordouglasmartins.com.br",
 ]
 
 X_FRAME_OPTIONS = 'DENY'
