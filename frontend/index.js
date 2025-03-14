@@ -23,8 +23,6 @@ function getCookie(name){
     return cookieValue;
 }
 
-const API_URL = "https://pagwebdg-production.up.railway.app/";
-
 document.getElementById("formCadastro").addEventListener("submit", async function (event) {
     event.preventDefault();
 

@@ -7,10 +7,13 @@ from .models import Usuario
 import gspread
 from google.oauth2.service_account import Credentials
 from decouple import config
-import os
 from config.settings import GOOGLE_SHEETS_CREDENTIALS
+from django.shortcuts import render
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
+
+def index(request):
+    return render(request, "index.html", {"API_URL": "https://pagwebdg-production.up.railway.app/api/"})
 
 def home(request):
     return HttpResponse("Bem-vindo ao site do Professor!")
