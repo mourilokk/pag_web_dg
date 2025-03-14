@@ -13,40 +13,75 @@
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-<!-- 🔹 Cabeçalho com Logo, Navegação e Nome -->
     <header>
-        <nav class="navbar">
-            <div class="nav-left">
-                <img src="images/logo_semfundo.png" alt="Logo do Professor" class="logo">
-            </div>
-            <ul class="nav-center">
-                <li><a href="#introducao">Início</a></li>
-                <li><a href="#valores">Valores</a></li>
-                <li><a href="#aprovacoes">Aprovações</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-            </ul>
-            <div class="nav-right">
-                <span>Professor Douglas Martins</span>
+        <nav class = "navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo_semfundo.png" alt="Logo do Professor" style="height: 50px;">
+                </a>
+        
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarPrincipal"
+                    aria-controls="navbarPrincipal"
+                    aria-expanded="false"
+                    aria-label="Menu de navegação"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarPrincipal">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#introducao">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#valores">Valores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#aprovacoes">Aprovações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                        </li>
+                    </ul>
+
+                    <span class="navbar-text">
+                        Professor Douglas Martins
+                    </span>
+                </div>
             </div>
         </nav>
     </header>
 
-
-    <section id ="introducao" class="lamina">
-        <img src="images/introducao.png" alt="Introdução">
+    <section id ="introducao" class="py-5">
+        <div class="container">
+            <img src="images/introducao.png" alt="Introdução" class="img-fluid">
+        </div>
     </section>
 
-    <section id="servicos" class="lamina">
-        <img src="images/servicos.png" alt="Serviços">
+    <section id="servicos" class="py-5">
+        <div class="container text-center">
+            <img src="images/servicos.png" alt="Serviços" class="img-fluid d-block mx-auto" style="max-width: 100%; max-width: 300px; @media (min-width: 900px) { max-width: 500px;}">
+        </div>
     </section>
 
-    <section id="valores" class="lamina">
-        <img src="images/valores.png" alt="Valores">
+    <section id="valores" class="py-5">
+        <div class="container">
+            <img src="images/valores.png" alt="Valores" class="img-fluid">
+        </div>
     </section>
 
-    <section id="aprovacoes" class="lamina">
-        <img src="images/aprovacoes.png" alt="Aprovações">
+    <section id="aprovacoes" class="py-5">
+        <div class="container">
+            <img src="images/aprovacoes.png" alt="Aprovações" class="img-fluid">
+        </div>
     </section>
 
     <section class="titulo-secao">
@@ -55,11 +90,11 @@
 
     <section id="depoimentos" class="lamina depoimentos">
         <div class="depoimento">
-            <img src="images/[POST] DEPOIMENTO DOUGLAS F.png" alt="Depoimento Douglas">
+            <img src="images/[POST] DEPOIMENTO DOUGLAS F.png" alt="Depoimento Douglas" class="img-fluid">
         </div>
 
         <div class="depoimento">
-            <img src="images/[POST] DEPOIMENTO THIAGO MARQUES.png">
+            <img src="images/[POST] DEPOIMENTO THIAGO MARQUES.png" class="img-fluid">
         </div>
     </section>
 
@@ -76,7 +111,8 @@
         <button id="btnAbrirForm">Garanta seu cupom!</button>
 
         <!-- Modal do Formulário -->
-        <div class="modal-bg" id="modalForm">
+    <section>
+        <div class="modal-bg" id="modalForm" style="display: none">
             <div class="modal-content">
                 <button class="close-btn" id="btnFechar">&times;</button>
                 <div class="modal-header">Cadastre-se para receber seu cupom!</div>
@@ -103,6 +139,7 @@
         </footer>
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 
 </body>

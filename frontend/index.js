@@ -25,6 +25,21 @@ function getCookie(name){
 
 const API_URL = "https://pagwebdg-production.up.railway.app/api/";
 
+document.addEventListener("DOMContentLoaded", function(){
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    const navCollapse = document.getElementById("navbarPrincipal");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            
+            const bsCollapse = new bootstrap.Collapse(navCollapse, {
+                toggle: false
+            });
+            bsCollapse.hide();
+        });
+    });
+});
+
 document.getElementById("formCadastro").addEventListener("submit", async function (event) {
     event.preventDefault();
 
